@@ -66,4 +66,68 @@
     -pulled from remote server to ensure changes are upto date
     -force pushed commits onto the server.
 
+## Task 6:
+**Stashing Changes for Context Switching**
+    
+    - Learn how to use Git stash to save uncommitted work temporarily.
+
+**Soln:** 
+
+    - Created <file6_1.txt> in task6 folder, under master branch 
+    - made commit of the original file and pushed it to remote 
+    - made changes to file, added to staging before switching to another branch
+    - came back to master branch, used <git stash list> to list stash, <git stash pop> to use the topmost stash 
+    and <git stash drop> to drop the top most stash 
+    - used git stash apply to apply changes to the working directory, then commited it. 
+
+    ![My Screenshot](https://github.com/user-attachments/assets/741e992d-427c-40bc-905a-7f316b7e9d67)
+
+## Task 7:
+**Cherry-Picking Commits Between Branches**
+    
+    - Selectively apply a commit from one branch to another using cherry-pick.
+
+**Soln:**
+
+    - created <file7_1.txt> under task7 folder, master branch 
+    - added lines, staged the file and commited it successfully 
+    - switched to branch1
+    - cherry picked commit made in master branch and applied it to branch1 
+    - pushed changes onto remote server, where branch1 now has <file7_1.txt>
+    
+## Task 8:
+ **Using Git Hooks for Automated Checks**
+    
+    
+    - Set up a Git hook to run scripts (like linters or tests) before commits are finalized.
+    
+**Soln:**
+
+    - created <commit_msg.py>, <file8_1.py> under task8 folder, master branch 
+
+    for pre-commit hook
+    - went to hooks directory under .git and wrote a pre-commit file, checking to see if there are any debugging print commands in the file. if it is present, it will show an error
+    - made the file executable and saved it 
+    - staged <file8_1.py> and committed, made checks before successfully committing. 
+
+    for commit-msg hook
+    - wrote code to check the commit message in the <commit-msg.py> file. it prints out the number of arguments, as well as the arguments of the commit. 
+    - linked the <commit-msg.py> file present in the task8 folder with the commit-msg hook present in the hook folder 
+    - stage <commit-msg.py> and committed, printed the necessary information. 
+
+## Task 9:
+  **Working with Remote Repositories and Collaboration**
+   
+    - Simulate a collaborative workflow with remote repositories.
+
+  **Soln:**
+
+    - created file <file9_1.txt> in task9 folder, master branch 
+    - made changes to file, committed and pushed to remote. 
+    - created new branch called feature from master, and made changes to <file9_1.txt>
+    - pushed the changes into remote 
+    - Compared and pulled request in remote, successfully merging feature into the master branch 
+    - pulled the changes from remote onto the local repository
+
+
   
