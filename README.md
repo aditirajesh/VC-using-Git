@@ -129,5 +129,22 @@
     - Compared and pulled request in remote, successfully merging feature into the master branch 
     - pulled the changes from remote onto the local repository
 
+## Task 10:
+**Comprehensive Workflow with Forced Pushes and Recovery
+
+    - Simulate an advanced Git scenario that includes forced pushes, recovering lost commits, and a multi-branch workflow.
+
+**Soln:**
+
+    - created <file10_1.txt> in task10 folder, master branch 
+    - edited the file and made initial commit.
+    - created new branch, called bugfix from master and made changes to <file10_1.txt> on the bugfix branch 
+    - used rebase to make histories linear, then called interactive rebase to reword the commit 
+    - force pushed the commit onto remote 
+    - to recoved the intiial commit made, used git reflog 
+    - used git reset -- hard on the lost commit to recover it back 
+    - did a force push on the recovered commit on the remote server. 
+    
+
 
   
